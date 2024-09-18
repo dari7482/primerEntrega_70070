@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.body {
+    background-color: #EDEDED;
+}
+
+
+
+.login-section {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+    background-image: url("../img/nubesNavBar.png");
+    min-width: 95vw;
+    margin-right: 40px;
+    margin-left: 70px;
+    border-radius: 60px;
+    margin-bottom: 30px;
+    margin-top: 78px;
+    min-height: 70vh;
+    align-items: center;
+}
+
+.card-container {
+    width: 26rem;
+    height: 28rem;
+    border-radius: 15px;
+    padding-top: 8px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: url("../img/nubesNavBar.png");
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-image img {
+    width: 14rem;
+    height: 13rem;
+    border-radius: 15px;
+}
+
+.card-descripcion {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    min-width: 250px;
+    font-family: "Merienda One", cursive;
+
+
+}
+
+.login-button {
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(112, 112, 175);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+input {
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+
+}
