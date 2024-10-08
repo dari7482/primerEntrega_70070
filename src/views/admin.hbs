@@ -17,11 +17,12 @@
                     </label>
                 </div>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>News</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>About</a></li>
-                    <li id="contCarrito" class="contCarrito"> </li>
+                    <li><a href="/profile">LOGOUT</a></li>
+                    <li id="contCarrito" class="contCarrito"></li>
+                    {{user.rol}}
+                    {{#if (eq user.rol 'admin')}}
+                    <li><a href="/admin">CRUD_ADMIN</a></li>
+                    {{/if}}
                 </ul>
             </div>
 

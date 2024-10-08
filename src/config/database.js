@@ -1,6 +1,11 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv'
 
-mongoose.connect('mongodb+srv://Dario:XQr2vgqNA7zcJgQJ@cluster0.pmc2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+dotenv.config()
+
+const MONGO_URL = process.env.MONGO_URL
+
+mongoose.connect(MONGO_URL);
 
 const db = mongoose.connection;
 

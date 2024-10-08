@@ -16,6 +16,15 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import exphbs from 'express-handlebars'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+
+
+
+const MONGO_URL = process.env.MONGO_URL
+
 
 
 // Obtener __filename a partir de import.meta.url
@@ -54,7 +63,7 @@ app.use(session({
     secret: 'secretkey',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://Dario:XQr2vgqNA7zcJgQJ@cluster0.pmc2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' })
+    store: MongoStore.create({ mongoUrl: MONGO_URL })
 }));
 initializePassport()
 app.use(passport.initialize())
