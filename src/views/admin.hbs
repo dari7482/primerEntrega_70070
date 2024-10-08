@@ -1,27 +1,21 @@
 <main>
-
     <div>
         <nav id="navContainerGrid" class="grid-container">
             <div id="navContainer" class="container-nav">
                 <div>
                     <div>
-                        <img src="/img/icons8-homero-simpson-30.svg">
+                        <img src="./img/icons8-homero-simpson-30.svg">
 
                     </div>
                     <p>Collection Animated Figures</p>
                 </div>
-                <p>Nombre: {{user.first_name}}</p>
-                <p>Apellido: {{user.last_name}}</p>
-                <p id="cartNumber" data-cart={{user.cart}}>cart: {{user.cart}}</p>
+
                 <div class="fields">
                     <label class="switch2">
                         <input id="switch" type="checkbox">
                         <span class="s2 around2"></span>
                     </label>
                 </div>
-
-
-
                 <ul>
                     <li><a>Home</a></li>
                     <li><a>News</a></li>
@@ -32,24 +26,134 @@
             </div>
 
         </nav>
+    </div>
+    <section>
+
+        <div class="formPag">
+            <form id="limitForm" action="/admin" method="get">
+
+                <label for="limit">Productos por página:</label>
+                <input type="number" id="limit" name="limit" min="1" value="{{this.limit}}" required>
+                <input type="hidden" name="page" value="{{this.page}}">
+                <button type="submit">Aplicar</button>
+
+            </form>
+        </div>
+        </div>
 
 
+    </section>
+    <section class="grid-sectioncards" id="cardcontainer">
 
-        <section class="grid-sectioncards" id="cardcontainer">
+        {{#each docs}}
+        <form class="cardProduct" id="cardProduct" action="">
+            <div style="width: 15rem" id="containerCards">
+                <div class="card-container">
+                    <div class="card-image">
+                        <img src={{this.thumbnail}}>
+                    </div>
+                    <div class="card-descripcion">
+                        <p class="id" name="id" hidden>{{this.id}}</p>
+                        <p class="thumbnail" name="thumb" hidden>{{this.thumbnail}}</p>
+                        <p class="name" data-name="name">{{this.name}}</p>
+                        <p class="description" data-name="description">{{this.description}}</p>
+                        <p class="price" name="price">${{this.price}}</p>
+                        <p class="stock" name="stock">STOCK:{{this.stock}}UN</p>
+                        <p id="idCart">cart:{{user.cart}}</p>
+                    </div>
+                    <div class="button-addcart">
+                        <button class="sub" type="submit" id="boton{{this.id}}">Delete</button>
+                    </div>
+                    <div class="input-cantidad">
+                        <div id="valorcontador">0</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {{/each}}
+
+    </section>
+    <section class="grid-form">
+
+        <div class="section-capitulos">
+            <h1>Add New Product</h1>
+
+            <div class="form-newProduct">
+                <form id="sectionForm">
+                    <div class="form-group-section">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="name.." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <input type="text" id="type" name="type" placeholder="Type.." required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" name="description" placeholder="description.." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stock">Stock</label>
+                            <input type="text" id="stock" name="stock" placeholder="Stock.." required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="serie">Serie</label>
+                            <input type="text" id="serie" name="serie" placeholder="Serie.." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" id="price" name="price" placeholder="Price.." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="section-capitulos-delete">
+            <h1>Delte by ID Product</h1>
+            <form class="form-newProduct-delete" id="sectionFormId">
+                <div class="form-group">
+                    <label for="name">ID</label>
+                    <input type="text" id="id" name="id" placeholder="id.." required>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footerHeader">
+            <div>
+                <h1>Coolection Animated Figured</h1>
+            </div>
+
+        </div>
 
 
-
-        </section>
-
-        </section>
-
+        <div class="footerDiv">
+            <div>
+                <img src="./img/homeroRosquilla.png">
 
 
-
-
-
+            </div>
+        </div>
+    </footer>
 
 </main>
 
-
-<script src="/js/index.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/newProduct.js"></script>

@@ -9,6 +9,7 @@ import productRouter from './routes/product.routes.js'
 import orderRouter from './routes/order.routes.js'
 import viewsRouter from './routes/views.js';
 import cartRouter from './routes/cart.routes.js';
+import adminRouter from './routes/admin.routes.js';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 import cookieParser from 'cookie-parser';
