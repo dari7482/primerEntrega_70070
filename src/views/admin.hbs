@@ -1,0 +1,55 @@
+<main>
+
+    <div>
+        <nav id="navContainerGrid" class="grid-container">
+            <div id="navContainer" class="container-nav">
+                <div>
+                    <div>
+                        <img src="/img/icons8-homero-simpson-30.svg">
+
+                    </div>
+                    <p>Collection Animated Figures</p>
+                </div>
+                <p>Nombre: {{user.first_name}}</p>
+                <p>Apellido: {{user.last_name}}</p>
+                <p id="cartNumber" data-cart={{user.cart}}>cart: {{user.cart}}</p>
+                <div class="fields">
+                    <label class="switch2">
+                        <input id="switch" type="checkbox">
+                        <span class="s2 around2"></span>
+                    </label>
+                </div>
+
+
+
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>About</a></li>
+                    <li id="contCarrito" class="contCarrito"> </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+        <section class="grid-sectioncards" id="cardcontainer">
+
+
+
+        </section>
+
+        </section>
+
+
+
+
+
+
+
+</main>
+
+
+<script src="/js/index.js"></script>

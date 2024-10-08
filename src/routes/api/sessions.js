@@ -1,10 +1,7 @@
 import { Router } from 'express';
-import cookieParser from 'cookie-parser';
-import User from '../../models/user.js';
-import { createHash, isValidPassword } from '../../utils.js';
+
 import passport from 'passport'
-//import initializePassport from './config/passport.config.js';
-import { authorization, passportCall } from '../../utils.js'
+
 
 import jwt from 'jsonwebtoken';
 
@@ -12,7 +9,8 @@ import jwt from 'jsonwebtoken';
 const router = Router();
 
 router.post('/register', passport.authenticate('register', { failureRedirect: '/failregister' }), async (req, res) => {
-    res.send({ status: "success", message: "usuario registrado" })
+    // res.send({ status: "success", message: "usuario registrado" })
+    res.redirect('/login');
 });
 
 router.get('/failregister', async (req, res) => {
@@ -31,6 +29,7 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/faillo
         first_name: req.user.first_name,
         last_name: req.user.last_name,
         age: req.user.age,
+        rol: req.user.rol,
         email: req.user.email,
         cart: req.user.cart
 

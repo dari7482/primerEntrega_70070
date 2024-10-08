@@ -32,13 +32,12 @@
             </div>
 
         </nav>
+
+
+
         <section class="grid-sectioncards" id="cardcontainer">
             <h2>Total a Pagar: ${{totalAmount}}</h2>
             <h2>Comprador: {{purchaser}}</h2>
-        </section>
-
-
-        <section class="grid-sectioncards" id="cardcontainer">
             {{#each cart}}
             <form class="cardProduct" id="cardProduct" action="">
                 <h2>Artiuclos Comprados</h2>
@@ -66,6 +65,7 @@
         </section>
 
         <section class="grid-sectioncards" id="cardcontainer">
+            <h1>Art sin stock</h1>
             {{#each unavailableProducts}}
             <form class="cardProduct" id="cardProduct" action="">
                 <h2>Artiuclos no encontrado</h2>

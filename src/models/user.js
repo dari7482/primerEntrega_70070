@@ -8,10 +8,15 @@ const userSchema = new mongoose.Schema({
     email: String,
     age: Number,
     password: String,
+    rol: {
+        type: String,
+        default: 'user'
+    },
     cart: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'carts' // Referencia a la colección de carritos
     }
+
 });
 
 const firstCollection = mongoose.model(userCollection, userSchema);

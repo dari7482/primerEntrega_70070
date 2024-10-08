@@ -14,6 +14,7 @@ import initializePassport from './config/passport.config.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import exphbs from 'express-handlebars'
 
 
 // Obtener __filename a partir de import.meta.url
@@ -29,11 +30,19 @@ const app = express();
 
 const PORT = 8080
 
+
+
 console.log(path.join((__dirname, "public")))
+//app.engine('handlebars', hbs.engine);
 app.engine('hbs', engine({
-    extname: '.hbs',
-    defaultLayout: 'main',
+    extname: '.hbs', // Extensión de archivos
+    defaultLayout: 'main', // Layout por defecto
+    helpers: {
+        eq: (a, b) => a === b, // Helper 'eq' para comparar valores
+    }
 }));
+
+
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
@@ -56,6 +65,7 @@ app.use('/', viewsRouter);
 app.use("/", productRouter)
 app.use("/", cartRouter)
 app.use("/", orderRouter)
+app.use("/", adminRouter)
 
 app.use(express.static(__dirname + '/public'))
 

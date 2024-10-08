@@ -27,7 +27,11 @@
                     <li><a>News</a></li>
                     <li><a>Contact</a></li>
                     <li><a>About</a></li>
-                    <li id="contCarrito" class="contCarrito"> </li>
+                    <li id="contCarrito" class="contCarrito"></li>
+                    {{user.rol}}
+                    {{#if (eq user.rol 'admin')}}
+                    <li><a href="/admin">CRUD_Admin</a></li>
+                    {{/if}}
                 </ul>
             </div>
 
