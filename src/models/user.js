@@ -7,7 +7,11 @@ const userSchema = new mongoose.Schema({
     last_name: String,
     email: String,
     age: Number,
-    password: String
+    password: String,
+    cart: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'carts' // Referencia a la colección de carritos
+    }
 });
 
 const firstCollection = mongoose.model(userCollection, userSchema);

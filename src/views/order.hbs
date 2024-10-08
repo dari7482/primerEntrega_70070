@@ -1,0 +1,103 @@
+<main>
+
+    <div>
+        <nav id="navContainerGrid" class="grid-container">
+            <div id="navContainer" class="container-nav">
+                <div>
+                    <div>
+                        <img src="/img/icons8-homero-simpson-30.svg">
+
+                    </div>
+                    <p>Collection Animated Figures</p>
+                </div>
+                <p>Nombre: {{user.first_name}}</p>
+                <p>Apellido: {{user.last_name}}</p>
+                <p id="cartNumber" data-cart={{user.cart}}>cart: {{user.cart}}</p>
+                <div class="fields">
+                    <label class="switch2">
+                        <input id="switch" type="checkbox">
+                        <span class="s2 around2"></span>
+                    </label>
+                </div>
+
+
+
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>About</a></li>
+                    <li id="contCarrito" class="contCarrito"> </li>
+                </ul>
+            </div>
+
+        </nav>
+        <section class="grid-sectioncards" id="cardcontainer">
+            <h2>Total a Pagar: ${{totalAmount}}</h2>
+            <h2>Comprador: {{purchaser}}</h2>
+        </section>
+
+
+        <section class="grid-sectioncards" id="cardcontainer">
+            {{#each cart}}
+            <form class="cardProduct" id="cardProduct" action="">
+                <h2>Artiuclos Comprados</h2>
+                <div style="width: 15rem" id="containerCards">
+
+                    <div class="card-container">
+                        <div class="card-image">
+                            <img src={{this.thumbnail}}>
+                        </div>
+                        <div class="card-descripcion">
+                            <p class="id" name="id" hidden>{{this.id}}</p>
+                            <p class="thumbnail" name="thumb" hidden>{{this.thumbnail}}</p>
+                            <p class="name" data-name="name">{{this.name}}</p>
+                            <p class="description" data-name="description">{{this.description}}</p>
+                            <p class="price" name="price">${{this.price}}</p>
+                            <p class="stock" name="stock">STOCK:{{this.stock}}UN</p>
+                            <p id="idCart">cart:{{user.cart}}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+            {{/each}}
+        </section>
+
+        <section class="grid-sectioncards" id="cardcontainer">
+            {{#each unavailableProducts}}
+            <form class="cardProduct" id="cardProduct" action="">
+                <h2>Artiuclos no encontrado</h2>
+                <div style="width: 15rem" id="containerCards">
+
+                    <div class="card-container">
+                        <div class="card-image">
+                            <img src={{this.thumbnail}}>
+                        </div>
+                        <div class="card-descripcion">
+                            <p class="id" name="id" hidden>{{this.id}}</p>
+                            <p class="thumbnail" name="thumb" hidden>{{this.thumbnail}}</p>
+                            <p class="name" data-name="name">{{this.name}}</p>
+                            <p class="description" data-name="description">{{this.description}}</p>
+                            <p class="price" name="price">${{this.price}}</p>
+                            <p class="stock" name="stock">STOCK:{{this.stock}}UN</p>
+                            <p id="idCart">cart:{{user.cart}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            {{/each}}
+        </section>
+
+
+
+
+
+
+
+</main>
+
+
+<script src="/js/index.js"></script>

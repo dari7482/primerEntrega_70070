@@ -1,6 +1,7 @@
 import passport from "passport";
 import local from 'passport-local'
 import userService from '../models/user.js'
+import cartModel from '../models/cart.model.js'
 import { createHash, isValidPassword } from '../utils.js'
 
 const LocalStrategy = local.Strategy
@@ -13,6 +14,10 @@ const initializePassport = () => {
         const { first_name, last_name, email, age } = req.body
         console.log(email)
         try {
+
+            const newCart = await cartModel.create({
+                products: []
+            });
             let user = await userService.findOne({ email: username })
             if (user) {
                 console.log("El usuario existe")
@@ -24,7 +29,8 @@ const initializePassport = () => {
                 last_name,
                 email,
                 age,
-                password: createHash(password)
+                password: createHash(password),
+                cart: newCart._id
             }
 
             let result = await userService.create(newUser)

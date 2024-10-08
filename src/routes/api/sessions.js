@@ -25,12 +25,18 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/faillo
     const { email, password } = req.body;
     if (!req.user) return res.status(400).send({ status: "error", error: "Credenciales invalidas" })
 
+
+
     req.session.user = {
         first_name: req.user.first_name,
         last_name: req.user.last_name,
         age: req.user.age,
-        email: req.user.email
+        email: req.user.email,
+        cart: req.user.cart
+
     }
+
+    console.log(req.session.user)
     let token = jwt.sign({ email, password, role: "user" }, "coderSecret", { expiresIn: "60s" })
     console.log(token)
     res.cookie('token', token, {
@@ -41,7 +47,7 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/faillo
 
 
     //res.send({ status: "success", payload: req.user })
-    res.redirect('/profile');
+    res.redirect('/api/products');
 });
 
 router.get('/faillogin', (req, res) => {

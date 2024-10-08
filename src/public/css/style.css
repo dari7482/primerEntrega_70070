@@ -10,8 +10,6 @@
     background-color: #EDEDED;
 }
 
-
-
 .login-section {
     margin-top: 3rem;
     display: flex;
@@ -95,6 +93,931 @@ input {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+
+
+}
+
+
+/*product Section*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    background-image: url("/img/nubesNavBar.png");
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+
+}
+
+.container-nav {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    font-family: "Merienda One", cursive;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 110px;
+}
+
+nav p {
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7070AF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    margin-right: 1rem;
+    background-image: url("../img/nubesNavBar.png");
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+
+
+}
+
+ul li a {
+
+    text-decoration: none;
+    color: black;
+    cursor: not-allowed
+}
+
+ul li img {
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+nav div div div img {
+
+    width: 50px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+
+nav div div {
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+
+}
+
+nav div div p {
+    align-content: center;
+    width: 80px;
+
+}
+
+
+
+nav div div div {
+
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-left: 3rem;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+}
+
+.itemsGuardados {
+    color: rgb(247, 0, 255);
+    background-color: #EDEDED;
+    width: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+}
+
+.contCarrito {
+    position: relative;
+
+
+
+}
+
+/* fin del NAv*/
+
+/*SECTION cardS productOS*/
+
+.grid-sectioncards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 2rem;
+    background-image: url("../img/nubesNavBar.png");
+    min-width: 95vw;
+
+    margin-right: 40px;
+    margin-left: 70px;
+    border-radius: 60px;
+    margin-bottom: 30px;
+    margin-top: 78px;
+    min-height: 70vh;
+
+
+
+
+}
+
+.grid-sectioncards-hell {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 2rem;
+    background-image: url("../img/nubes_rojas.png");
+    width: 90vw;
+    margin-right: 40px;
+    margin-left: 70px;
+    border-radius: 60px;
+    margin-bottom: 30px;
+    margin-top: 78px;
+
+
+
+
+}
+
+.card-container {
+    width: 15rem;
+    height: 28rem;
+    border-radius: 15px;
+    padding-top: 8px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: url("../img/nubesNavBar.png");
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-image img {
+    width: 14rem;
+    height: 13rem;
+    border-radius: 15px;
+}
+
+.card-descripcion {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    min-width: 250px;
+    font-family: "Merienda One", cursive;
+}
+
+
+.button-add button {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(168, 217, 209);
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-family: "Merienda One", cursive;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.button-add {
+    display: flex;
+    justify-content: center;
+    column-gap: .5rem;
+    margin-bottom: .5rem;
+    font-family: "Merienda One", cursive;
+
+}
+
+.button-addcart {
+    display: flex;
+    justify-content: center;
+    cursor: pointer
+}
+
+
+
+.button-addcart button {
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(112, 112, 175);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+.button-addcart button:hover {
+    background-color: #3e8e41
+}
+
+.button-addcart button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#options {
+    text-align: center;
+
+
+}
+
+.input-cantidad {
+    display: flex;
+    justify-content: center;
+    font-family: "Merienda One", cursive;
+    font-size: 1.5rem;
+}
+
+.input-cantidad {
+
+    align-items: center;
+}
+
+.input-cantidad input {
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    border: 3px solid;
+
+}
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+
+}
+
+
+
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #EDEDED;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+
+    text-align: center;
+    overflow-y: auto;
+    height: 60%;
+    background-image: url("../img/nubesNavBar.png");
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+
+}
+
+.modal h1 {
+    font-family: "Merienda One", cursive;
+    font-size: 3rem;
+
+
+
+
+}
+
+.modal::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+
+
+}
+
+
+.modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 100px;
+
+
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+}
+
+.modal h1 {
+    margin: 0;
+}
+
+.modal p {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.container-modal {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 60px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-image: url("../img/nubesNavBar.png");
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 65px;
+    margin-top: 20px;
+
+
+}
+
+.image-modal {
+
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+
+}
+
+.image-modal img {
+    width: 14rem;
+    height: 13rem;
+
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.imgae-chapter-container {
+
+    width: 90vw;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #70DA80;
+    margin-left: 70px;
+    margin-right: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: url("../img/nubesNavBar.png");
+    margin-bottom: 100px;
+
+
+}
+
+.container-episode {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 220px;
+    min-height: 400px;
+    max-height: auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    justify-items: center;
+    background-image: url("../img/nubes.png");
+
+
+
+
+}
+
+.container-episode img {
+
+    width: 220px;
+    height: 220px;
+    padding: 5px;
+    border-radius: 15px;
+
+
+}
+
+.container-episode h2 {
+    font-family: "Merienda One", cursive;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0E0000;
+
+    padding: 3px;
+
+
+}
+
+.container-episode p {
+    text-align: center;
+    font-family: "Merienda One", cursive;
+    color: #0E0000;
+    padding: 2px;
+
+}
+
+.grid-form {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem;
+    background-image: url("../img/nubesNavBar.png");
+    width: 90vw;
+    margin-right: 40px;
+    margin-left: 70px;
+    border-radius: 60px;
+    margin-bottom: 30px;
+    margin-top: 78px;
+
+
+
+
+}
+
+.section-form {
+    margin-left: 70px;
+    width: 91%;
+    display: flex;
+    background-image: url("../img/nubes.png");
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 60px;
+}
+
+.form-newProduct {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+.section-capitulos {
+
+    width: 91%;
+    display: flex;
+    background-image: url("../img/nubes.png");
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 60px;
+
+
+}
+
+.section-capitulos-delete {
+
+    width: 91%;
+    display: flex;
+    background-image: url("../img/nubes.png");
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    justify-content: flex-start;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 60px;
+
+
+}
+
+.section-capitulos-delete h1 {
+
+    font-family: "Merienda One", cursive;
+    font-size: 2rem;
+}
+
+.section-capitulos-delete h2 {
+    font-family: "Merienda One", cursive;
+    font-size: 4rem;
+    margin-bottom: 30px;
+
+
+}
+
+.form-newProduct-delete div {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 5px;
+
+
+}
+
+.form-newProduct div {
+
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 5px;
+
+
+}
+
+.form-newProduct-delete {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.buttonAddNew {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+.buttonAddNew input {
+    background-color: rgb(168, 217, 209);
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-family: "Merienda One", cursive;
+    font-size: xx-large;
+    cursor: pointer;
+
+
+
+}
+
+.section-capitulos h1 {
+
+    font-family: "Merienda One", cursive;
+    font-size: 2rem;
+}
+
+.section-capitulos h2 {
+    font-family: "Merienda One", cursive;
+    font-size: 4rem;
+    margin-bottom: 30px;
+
+
+}
+
+.section-capitulos select {
+    font-family: "Merienda One", cursive;
+    font-size: 2rem;
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 60px;
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    background-image: url("../img/nubesNavBar.png");
+}
+
+footer .footerHeader {
+
+    font-family: "Merienda One", cursive;
+
+
+
+}
+
+footer img {
+
+    width: 100px;
+    height: 100px;
+
+}
+
+.comprar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(112, 112, 175);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+
+.cerrar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(32, 162, 80);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+.eliminar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(186, 86, 86);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+.fields {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px
+}
+
+.switch2 {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border-radius: 50%;
+
+
+
+}
+
+.switch2 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.s2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/nuebes_switch.png);
+    cursor: pointer;
+    background-color: #ccc;
+    -webkit-transition: .164s;
+    transition: .164s;
+    background-size: cover;
+
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.s2:before {
+
+    position: absolute;
+    content: "";
+    height: 46px;
+    width: 46px;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-image: url(../img/homer_good.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-image: 20px;
+    background-size: cover;
+    top: 2px
+}
+
+.s2.around2 {
+    border-radius: 34px;
+    box-shadow: #0E0000;
+    border: 1px solid
+}
+
+.s2.around2:before {
+    border-radius: 50%;
+
+}
+
+
+input:checked+.s2 {
+    background-color: #2196F3;
+    background-image: url(../img/infierno_switch.png);
+}
+
+input:focus+.s2 {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.s2:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(66px);
+    background-image: url(../img/evil_homer.png);
+    border-image: 10px;
+    background-size: cover;
+    height: 46px;
+    width: 46px;
+
+}
+
+.cloud-button {
+    background-color: #87ceeb;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.cloud-button::before,
+.cloud-button::after {
+    content: '';
+    position: absolute;
+    background-color: #87ceeb;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cloud-button::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 20px;
+}
+
+.cloud-button::after {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: 20px;
+}
+
+.cloud-button:hover {
+    background-color: #00bfff;
+}
+
+.pagination_form {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 10vh;
+
+
+}
+
+
+.pagination_form a {
+    color: rgb(0, 0, 0);
+    font-family: "Merienda One", cursive;
+    font-size: xx-large;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+
+
+
+
+}
+
+
+.formPagination {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+
+    width: 200px;
+    height: 200px;
+    background-color: #2196F3;
+
+}
+
+
+.formPag {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+
+    height: 10px;
+}
+
+.formPag label {
+
+    width: 5rem;
+
+
+}
+
+.inputsBox {
+    display: flex;
+
+
+
 
 
 }
