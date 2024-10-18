@@ -19,7 +19,7 @@ Password:123
 
     ```
     git clone https://github.com/tu-usuario/tu-repositorio.git
-    en el directorio "70065_3Entrega_Datach>"  ejecutar en NPM install
+    en el directorio "primerEntrega_70070>"  ejecutar en NPM install
     
     cd src
     ```
