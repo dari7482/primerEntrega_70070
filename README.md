@@ -32,7 +32,10 @@ Password:123
 
 ## Configuración
 
-No se necesita configuración adicional. El proyecto está listo para usarse después de instalar las dependencias.
+crear archiv .env y  con las siguientes variables 
+MONGO_URL= 
+PORT=8080
+completar MONGO_URL CON La url detallada en el envio de la entrega
 
 ## Uso
 
