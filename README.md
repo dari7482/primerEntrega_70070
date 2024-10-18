@@ -4,7 +4,7 @@
 Este proyecto permite a un usario ingresar  productos al carrito , visualizarlo mediante un modal, eliminar el producto o vaciar el contenido del carrito 
 adiconalemte ,permite realizar consulta de stock , paginacion y  cantidad de items a mostrar.
 se prodra crear usuario y loguearse, e ingresar como Administrador con el siguiente
-USER :admin123@gmail.com
+USER: admin123@gmail.com
 Password:123
 
 
